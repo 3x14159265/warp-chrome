@@ -7,6 +7,8 @@
   permission in the manifest file (or calling
   "Notification.requestPermission" beforehand).
 */
+
+
 function show(msg) {  
   new Notification('warp-engine message', {
     icon: '64.png',
@@ -26,19 +28,17 @@ if (window.Notification) {
 }
 
 function connect() {
-  var wsUri = 'ws://'+localStorage.host+'/socket';
-
-    websocket = new WebSocket(wsUri);
+    var warp = new Warp();
     
-    websocket.onopen = function(evt) {};
+    var channels = localStorage.channels.split(',')
+    
+    channels.forEach(function(channel) {
+      	if(channel.length > 0) {
+      	    warp.subscribe("default", function(msg) {
+      	      show(JSON.stringify(msg))
+      	    })
+      	}
+    })
 
-    websocket.onclose = function(evt) {};
-
-    websocket.onmessage = function(evt) {
-	if(evt.data) {
-	  show(evt.data);
-	}
-    };
-
-    websocket.onerror = function(evt) {};
+    
 }

@@ -1,0 +1,21 @@
+{
+  "name": "warp-client",
+  "version": "0.1.1",
+  "homepage": "https://github.com/3x14159265/warp-client",
+  "authors": [
+    "david pichsenmeister <bruce@wayne-industries.com>"
+  ],
+  "description": "warp-engine JavaScript SDK",
+  "main": "warp.js",
+  "license": "GPL v3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reconnectingWebsocket": "*"
+  }
+}

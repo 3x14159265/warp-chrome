@@ -14,12 +14,22 @@ window.addEventListener('load', function() {
   }
   options.host.value = localStorage.host;
 
-  options.channels.onchange = function() {
+  options.channels.onchange = saveChannels
+
+  options.host.onchange = saveHost
+
+  options.save.onclick = function() {
+    saveChannels()
+    saveHost()
+    window.close()
+  }
+
+  function saveChannels() {
     var channels = options.channels.value.replace(/ /ig,'');
     localStorage.channels = channels;
-  };
+  }
 
-  options.host.onchange = function() {
-    localStorage.host = options.host.value.replace(/http:\/\//i,'').replace(/https:\/\//i,'');
-  };
+  function saveHost() {
+    localStorage.host = options.host.value.replace(/http:\/\//i,'').replace(/https:\/\//i,''); 
+  }
 });

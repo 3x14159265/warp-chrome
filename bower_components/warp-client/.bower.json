@@ -1,0 +1,30 @@
+{
+  "name": "warp-client",
+  "version": "0.1.2",
+  "homepage": "https://github.com/3x14159265/warp-client",
+  "authors": [
+    "david pichsenmeister <bruce@wayne-industries.com>"
+  ],
+  "description": "warp-engine JavaScript SDK",
+  "main": "warp.js",
+  "license": "GPL v3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reconnectingWebsocket": "*"
+  },
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.2",
+    "commit": "27a1d4553d4fe53642aac938dcd2d64ff67732a2"
+  },
+  "_source": "git://github.com/3x14159265/warp-client.git",
+  "_target": "~0.1.0",
+  "_originalSource": "warp-client"
+}

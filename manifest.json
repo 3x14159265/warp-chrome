@@ -8,7 +8,8 @@
     "notifications"
   ],
   "options_page": "options.html",
-  "background": { "scripts": ["background.js"] },
+  "background": { "scripts": ["bower_components/reconnectingWebsocket/reconnecting-websocket.js", 
+  "bower_components/warp-client/warp.min.js", "background.js"] },
   "manifest_version": 2,
 
   "web_accessible_resources": [

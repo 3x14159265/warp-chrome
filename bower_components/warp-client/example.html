@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>warp-engine example</title>
+    </head>
+    <div>messages:</div>
+    <div id="messages"></div>
+    <body>
+        <script src="bower_components/reconnectingWebsocket/reconnecting-websocket.js" type="text/javascript"></script>
+        <script src="warp.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var warp = new Warp({'debug': true});
+
+            warp.subscribe("default", function(msg) {
+		        append(msg)
+            })
+
+            warp.subscribe("other", function(msg) {
+                append(msg)
+            })
+
+            // console.log("[client] all channels: "+JSON.stringify(warp.allChannels()))  
+
+            setInterval(function() {
+                warp.beam("default", {"spock": "beam me up, scotty!"});     
+            }, 10000)
+
+            setInterval(function() {
+                warp.beam("other", {"scotty": "ready in 2!"});     
+            }, 15000)
+
+            function append(msg) {
+                var stringify = JSON.stringify(msg);
+                console.log("[client] receive: "+stringify);
+                var messages = document.getElementById('messages');
+                var node = document.createElement("p");
+                var textnode = document.createTextNode(stringify);
+                node.appendChild(textnode);
+                messages.appendChild(node);
+            }
+        </script>
+    </body>
+</html>
