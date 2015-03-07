@@ -1,5 +1,5 @@
 {
-  "name": "reconnecting-websocket",
+  "name": "reconnectingWebsocket",
   "main": "reconnecting-websocket.js",
   "homepage": "https://github.com/joewalnes/reconnecting-websocket",
   "authors": [
@@ -20,11 +20,11 @@
     "test",
     "tests"
   ],
-  "_release": "ee8f7949c3",
+  "_release": "5bc6436e57",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ee8f7949c3b9cc44ec99d49b62bf9b71c3559031"
+    "commit": "5bc6436e5749294010c309026b34073ed0b9ad0b"
   },
   "_source": "git://github.com/joewalnes/reconnecting-websocket.git",
   "_target": "*",

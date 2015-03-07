@@ -1,6 +1,6 @@
 {
   "name": "warp-client",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "homepage": "https://github.com/3x14159265/warp-client",
   "authors": [
     "david pichsenmeister <bruce@wayne-industries.com>"
@@ -18,11 +18,11 @@
   "dependencies": {
     "reconnectingWebsocket": "*"
   },
-  "_release": "0.1.2",
+  "_release": "0.1.4",
   "_resolution": {
     "type": "version",
-    "tag": "v0.1.2",
-    "commit": "27a1d4553d4fe53642aac938dcd2d64ff67732a2"
+    "tag": "v0.1.4",
+    "commit": "fd76ff60245417eeb667c9754551844156b4ea60"
   },
   "_source": "git://github.com/3x14159265/warp-client.git",
   "_target": "~0.1.0",
